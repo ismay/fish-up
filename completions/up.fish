@@ -1,9 +1,9 @@
 function _up_complete
-  set --local p (string trim --chars=/ (dirname $PWD) | string split /)
+    set --local p (string trim --chars=/ (dirname $PWD) | string split /)
 
-  for d in $p
-    echo $d
-  end
+    for d in $p
+        echo $d
+    end
 end
 
 complete -c up -fa "(_up_complete)"
